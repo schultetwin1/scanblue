@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C957D7E318F0B43B0076DE66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C957D7E218F0B43B0076DE66 /* Cocoa.framework */; };
+		C957D7ED18F0B43B0076DE66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C957D7EB18F0B43B0076DE66 /* InfoPlist.strings */; };
+		C957D7EF18F0B43B0076DE66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C957D7EE18F0B43B0076DE66 /* main.m */; };
+		C957D7F318F0B43B0076DE66 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C957D7F118F0B43B0076DE66 /* Credits.rtf */; };
+		C957D7F618F0B43B0076DE66 /* SPQRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C957D7F518F0B43B0076DE66 /* SPQRAppDelegate.m */; };
+		C957D7F918F0B43B0076DE66 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C957D7F718F0B43B0076DE66 /* MainMenu.xib */; };
+		C957D7FB18F0B43B0076DE66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C957D7FA18F0B43B0076DE66 /* Images.xcassets */; };
+		C957D80218F0B43B0076DE66 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C957D80118F0B43B0076DE66 /* XCTest.framework */; };
+		C957D80318F0B43B0076DE66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C957D7E218F0B43B0076DE66 /* Cocoa.framework */; };
+		C957D80B18F0B43B0076DE66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C957D80918F0B43B0076DE66 /* InfoPlist.strings */; };
+		C957D80D18F0B43B0076DE66 /* Blue_ScanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C957D80C18F0B43B0076DE66 /* Blue_ScanTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C957D80418F0B43B0076DE66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C957D7D718F0B43B0076DE66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C957D7DE18F0B43B0076DE66;
+			remoteInfo = "Blue Scan";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C957D7DF18F0B43B0076DE66 /* Blue Scan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blue Scan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C957D7E218F0B43B0076DE66 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C957D7E518F0B43B0076DE66 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C957D7E618F0B43B0076DE66 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C957D7E718F0B43B0076DE66 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C957D7EA18F0B43B0076DE66 /* Blue Scan-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Blue Scan-Info.plist"; sourceTree = "<group>"; };
+		C957D7EC18F0B43B0076DE66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C957D7EE18F0B43B0076DE66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C957D7F018F0B43B0076DE66 /* Blue Scan-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Blue Scan-Prefix.pch"; sourceTree = "<group>"; };
+		C957D7F218F0B43B0076DE66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		C957D7F418F0B43B0076DE66 /* SPQRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPQRAppDelegate.h; sourceTree = "<group>"; };
+		C957D7F518F0B43B0076DE66 /* SPQRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPQRAppDelegate.m; sourceTree = "<group>"; };
+		C957D7F818F0B43B0076DE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C957D7FA18F0B43B0076DE66 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C957D80018F0B43B0076DE66 /* Blue ScanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Blue ScanTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C957D80118F0B43B0076DE66 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C957D80818F0B43B0076DE66 /* Blue ScanTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Blue ScanTests-Info.plist"; sourceTree = "<group>"; };
+		C957D80A18F0B43B0076DE66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C957D80C18F0B43B0076DE66 /* Blue_ScanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Blue_ScanTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C957D7DC18F0B43B0076DE66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C957D7E318F0B43B0076DE66 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C957D7FD18F0B43B0076DE66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C957D80318F0B43B0076DE66 /* Cocoa.framework in Frameworks */,
+				C957D80218F0B43B0076DE66 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C957D7D618F0B43B0076DE66 = {
+			isa = PBXGroup;
+			children = (
+				C957D7E818F0B43B0076DE66 /* Blue Scan */,
+				C957D80618F0B43B0076DE66 /* Blue ScanTests */,
+				C957D7E118F0B43B0076DE66 /* Frameworks */,
+				C957D7E018F0B43B0076DE66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C957D7E018F0B43B0076DE66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C957D7DF18F0B43B0076DE66 /* Blue Scan.app */,
+				C957D80018F0B43B0076DE66 /* Blue ScanTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C957D7E118F0B43B0076DE66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C957D7E218F0B43B0076DE66 /* Cocoa.framework */,
+				C957D80118F0B43B0076DE66 /* XCTest.framework */,
+				C957D7E418F0B43B0076DE66 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C957D7E418F0B43B0076DE66 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C957D7E518F0B43B0076DE66 /* AppKit.framework */,
+				C957D7E618F0B43B0076DE66 /* CoreData.framework */,
+				C957D7E718F0B43B0076DE66 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		C957D7E818F0B43B0076DE66 /* Blue Scan */ = {
+			isa = PBXGroup;
+			children = (
+				C957D7F418F0B43B0076DE66 /* SPQRAppDelegate.h */,
+				C957D7F518F0B43B0076DE66 /* SPQRAppDelegate.m */,
+				C957D7F718F0B43B0076DE66 /* MainMenu.xib */,
+				C957D7FA18F0B43B0076DE66 /* Images.xcassets */,
+				C957D7E918F0B43B0076DE66 /* Supporting Files */,
+			);
+			path = "Blue Scan";
+			sourceTree = "<group>";
+		};
+		C957D7E918F0B43B0076DE66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C957D7EA18F0B43B0076DE66 /* Blue Scan-Info.plist */,
+				C957D7EB18F0B43B0076DE66 /* InfoPlist.strings */,
+				C957D7EE18F0B43B0076DE66 /* main.m */,
+				C957D7F018F0B43B0076DE66 /* Blue Scan-Prefix.pch */,
+				C957D7F118F0B43B0076DE66 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C957D80618F0B43B0076DE66 /* Blue ScanTests */ = {
+			isa = PBXGroup;
+			children = (
+				C957D80C18F0B43B0076DE66 /* Blue_ScanTests.m */,
+				C957D80718F0B43B0076DE66 /* Supporting Files */,
+			);
+			path = "Blue ScanTests";
+			sourceTree = "<group>";
+		};
+		C957D80718F0B43B0076DE66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C957D80818F0B43B0076DE66 /* Blue ScanTests-Info.plist */,
+				C957D80918F0B43B0076DE66 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C957D7DE18F0B43B0076DE66 /* Blue Scan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C957D81018F0B43B0076DE66 /* Build configuration list for PBXNativeTarget "Blue Scan" */;
+			buildPhases = (
+				C957D7DB18F0B43B0076DE66 /* Sources */,
+				C957D7DC18F0B43B0076DE66 /* Frameworks */,
+				C957D7DD18F0B43B0076DE66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Blue Scan";
+			productName = "Blue Scan";
+			productReference = C957D7DF18F0B43B0076DE66 /* Blue Scan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C957D7FF18F0B43B0076DE66 /* Blue ScanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C957D81318F0B43B0076DE66 /* Build configuration list for PBXNativeTarget "Blue ScanTests" */;
+			buildPhases = (
+				C957D7FC18F0B43B0076DE66 /* Sources */,
+				C957D7FD18F0B43B0076DE66 /* Frameworks */,
+				C957D7FE18F0B43B0076DE66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C957D80518F0B43B0076DE66 /* PBXTargetDependency */,
+			);
+			name = "Blue ScanTests";
+			productName = "Blue ScanTests";
+			productReference = C957D80018F0B43B0076DE66 /* Blue ScanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C957D7D718F0B43B0076DE66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SPQR;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = SPQR;
+				TargetAttributes = {
+					C957D7FF18F0B43B0076DE66 = {
+						TestTargetID = C957D7DE18F0B43B0076DE66;
+					};
+				};
+			};
+			buildConfigurationList = C957D7DA18F0B43B0076DE66 /* Build configuration list for PBXProject "Blue Scan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C957D7D618F0B43B0076DE66;
+			productRefGroup = C957D7E018F0B43B0076DE66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C957D7DE18F0B43B0076DE66 /* Blue Scan */,
+				C957D7FF18F0B43B0076DE66 /* Blue ScanTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C957D7DD18F0B43B0076DE66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C957D7ED18F0B43B0076DE66 /* InfoPlist.strings in Resources */,
+				C957D7FB18F0B43B0076DE66 /* Images.xcassets in Resources */,
+				C957D7F318F0B43B0076DE66 /* Credits.rtf in Resources */,
+				C957D7F918F0B43B0076DE66 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C957D7FE18F0B43B0076DE66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C957D80B18F0B43B0076DE66 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C957D7DB18F0B43B0076DE66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C957D7F618F0B43B0076DE66 /* SPQRAppDelegate.m in Sources */,
+				C957D7EF18F0B43B0076DE66 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C957D7FC18F0B43B0076DE66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C957D80D18F0B43B0076DE66 /* Blue_ScanTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C957D80518F0B43B0076DE66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C957D7DE18F0B43B0076DE66 /* Blue Scan */;
+			targetProxy = C957D80418F0B43B0076DE66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C957D7EB18F0B43B0076DE66 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C957D7EC18F0B43B0076DE66 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C957D7F118F0B43B0076DE66 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C957D7F218F0B43B0076DE66 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		C957D7F718F0B43B0076DE66 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C957D7F818F0B43B0076DE66 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		C957D80918F0B43B0076DE66 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C957D80A18F0B43B0076DE66 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C957D80E18F0B43B0076DE66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C957D80F18F0B43B0076DE66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C957D81118F0B43B0076DE66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Blue Scan/Blue Scan-Prefix.pch";
+				INFOPLIST_FILE = "Blue Scan/Blue Scan-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C957D81218F0B43B0076DE66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Blue Scan/Blue Scan-Prefix.pch";
+				INFOPLIST_FILE = "Blue Scan/Blue Scan-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C957D81418F0B43B0076DE66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Blue Scan.app/Contents/MacOS/Blue Scan";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Blue Scan/Blue Scan-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Blue ScanTests/Blue ScanTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C957D81518F0B43B0076DE66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Blue Scan.app/Contents/MacOS/Blue Scan";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Blue Scan/Blue Scan-Prefix.pch";
+				INFOPLIST_FILE = "Blue ScanTests/Blue ScanTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C957D7DA18F0B43B0076DE66 /* Build configuration list for PBXProject "Blue Scan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C957D80E18F0B43B0076DE66 /* Debug */,
+				C957D80F18F0B43B0076DE66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C957D81018F0B43B0076DE66 /* Build configuration list for PBXNativeTarget "Blue Scan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C957D81118F0B43B0076DE66 /* Debug */,
+				C957D81218F0B43B0076DE66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C957D81318F0B43B0076DE66 /* Build configuration list for PBXNativeTarget "Blue ScanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C957D81418F0B43B0076DE66 /* Debug */,
+				C957D81518F0B43B0076DE66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C957D7D718F0B43B0076DE66 /* Project object */;
+}
