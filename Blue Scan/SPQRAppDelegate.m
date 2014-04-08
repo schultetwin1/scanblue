@@ -20,9 +20,9 @@
         self.cBCM = [[[CBCentralManager alloc] init] initWithDelegate:self.ctrl queue:nil];
         self.ctrl.delegate = self;
     }
-    self.scanData = [[NSTableView alloc] init];
     [self.scanData setDelegate:self];
     [self.scanData setDataSource:self];
+    [self.scanData reloadData];
     
 }
 
@@ -40,26 +40,13 @@
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     
-    NSLog(@"HERE");
     // Get an existing cell with the MyView identifier if it exists
-    NSTextField *result = [tableView makeViewWithIdentifier:@"NameCell" owner:self];
-    
-    // There is no existing cell to reuse so create a new one
-    if (result == nil) {
-        
-        // Create the new NSTextField with a frame of the {0,0} with the width of the table.
-        // Note that the height of the frame is not really relevant, because the row height will modify the height.
-        result = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 100, 30)];
-        
-        // The identifier of the NSTextField instance is set to MyView.
-        // This allows the cell to be reused.
-        result.identifier = @"NameCell";
-    }
+    NSTableCellView *result = [tableView makeViewWithIdentifier:@"NameCell" owner:self];
     
     // result is now guaranteed to be valid, either as a reused cell
     // or as a new cell, so set the stringValue of the cell to the
     // nameArray value at row
-    result.stringValue = [self.periphs objectAtIndex:row];
+    [result.textField setStringValue:[self.periphs objectAtIndex:row]];
     
     // Return the result
     return result;
