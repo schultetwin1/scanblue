@@ -8,17 +8,22 @@
 
 #import <Foundation/Foundation.h>
 #import <IOBluetooth/IOBluetooth.h>
+#import <CoreLocation/CoreLocation.h>
 
 @protocol SPQRCMCtrlDelegate <NSObject>
 
 @required
-- (void) foundPeripheral:(CBPeripheral *)p;
+- (void) didFindPeripheral:(CBPeripheral *)p;
+- (void) didBTLEStatusUpdate;
+- (void) didLocationUpdate:(CLLocation *)l;
+- (void) didLocationStatusUpdate;
 
 @end
 
-@interface SPQRCMCtrl : NSObject <CBCentralManagerDelegate>
+@interface SPQRCMCtrl : NSObject <CBCentralManagerDelegate, CLLocationManagerDelegate>
 
 @property BOOL cBReady;
+@property BOOL cLLocAllowed;
 @property (nonatomic,assign) id delegate;
 
 @end

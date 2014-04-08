@@ -41,11 +41,25 @@
         default:
             break;
     }
+    [self.delegate didBTLEStatusUpdate];
 }
 
 -(void) centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI {
     NSLog(@"Discoved peripheral. peripheral: %@, rssi: %@, Advertisment Data %@", peripheral, RSSI, advertisementData);
-    [self.delegate foundPeripheral:peripheral];
+    [self.delegate didFindPeripheral:peripheral];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    [self.delegate didLocationUpdate:locations[0]];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    if (status != kCLAuthorizationStatusAuthorized) {
+        self.cLLocAllowed = NO;
+    } else {
+        self.cLLocAllowed = YES;
+    }
+    [self.delegate didLocationStatusUpdate];
 }
 
 @end

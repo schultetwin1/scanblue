@@ -8,21 +8,29 @@
 
 #import <Cocoa/Cocoa.h>
 #import <IOBluetooth/IOBluetooth.h>
+#import <CoreLocation/CoreLocation.h>
 
 #import "SPQRCMCtrl.h"
 
 @interface SPQRAppDelegate : NSObject <NSApplicationDelegate, SPQRCMCtrlDelegate, NSTableViewDataSource, NSTableViewDelegate>
 
+@property BOOL isScanning;
+@property BOOL isLocating;
+
 @property (strong) SPQRCMCtrl* ctrl;
 @property (nonatomic,strong) CBCentralManager *cBCM;
-@property (assign) IBOutlet NSWindow *window;
+@property (nonatomic,strong) CLLocationManager *cLLM;
+
 @property (strong) NSMutableArray* periphs;
+
+@property (assign) IBOutlet NSWindow *window;
 @property (strong) IBOutlet NSTableView *scanData;
+@property (weak) IBOutlet NSTextField *btleStatusLabel;
+@property (weak) IBOutlet NSButton *scanBtn;
+@property (weak) IBOutlet NSTextField *longText;
+@property (weak) IBOutlet NSTextField *latText;
+@property (weak) IBOutlet NSButton *locBtn;
 
 - (IBAction)scan:(id)sender;
-
-- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row;
-- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView;
-
 
 @end

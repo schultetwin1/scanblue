@@ -20,6 +20,8 @@
 		C957D80D18F0B43B0076DE66 /* Blue_ScanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C957D80C18F0B43B0076DE66 /* Blue_ScanTests.m */; };
 		C957D81818F0B4B00076DE66 /* SPQRCMCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = C957D81718F0B4B00076DE66 /* SPQRCMCtrl.m */; };
 		C957D81A18F0B4D60076DE66 /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C957D81918F0B4D60076DE66 /* IOBluetooth.framework */; };
+		C9E46CEF18F49A4800A4C796 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E46CEE18F49A4800A4C796 /* CoreLocation.framework */; };
+		C9E46CF118F49C5C00A4C796 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E46CF018F49C5C00A4C796 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		C957D81618F0B4B00076DE66 /* SPQRCMCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPQRCMCtrl.h; sourceTree = "<group>"; };
 		C957D81718F0B4B00076DE66 /* SPQRCMCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPQRCMCtrl.m; sourceTree = "<group>"; };
 		C957D81918F0B4D60076DE66 /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = System/Library/Frameworks/IOBluetooth.framework; sourceTree = SDKROOT; };
+		C9E46CEE18F49A4800A4C796 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C9E46CF018F49C5C00A4C796 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E46CF118F49C5C00A4C796 /* MapKit.framework in Frameworks */,
+				C9E46CEF18F49A4800A4C796 /* CoreLocation.framework in Frameworks */,
 				C957D81A18F0B4D60076DE66 /* IOBluetooth.framework in Frameworks */,
 				C957D7E318F0B43B0076DE66 /* Cocoa.framework in Frameworks */,
 			);
@@ -101,6 +107,8 @@
 		C957D7E118F0B43B0076DE66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C9E46CF018F49C5C00A4C796 /* MapKit.framework */,
+				C9E46CEE18F49A4800A4C796 /* CoreLocation.framework */,
 				C957D81918F0B4D60076DE66 /* IOBluetooth.framework */,
 				C957D7E218F0B43B0076DE66 /* Cocoa.framework */,
 				C957D80118F0B43B0076DE66 /* XCTest.framework */,
@@ -477,6 +485,7 @@
 				C957D81218F0B43B0076DE66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C957D81318F0B43B0076DE66 /* Build configuration list for PBXNativeTarget "Blue ScanTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +494,7 @@
 				C957D81518F0B43B0076DE66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
