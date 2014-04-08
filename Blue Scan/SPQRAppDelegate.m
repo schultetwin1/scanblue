@@ -40,16 +40,32 @@
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     
-    // Get an existing cell with the MyView identifier if it exists
-    NSTableCellView *result = [tableView makeViewWithIdentifier:@"NameCell" owner:self];
+    if ([tableColumn.identifier  isEqual: @"NameCell"]) {
     
-    // result is now guaranteed to be valid, either as a reused cell
-    // or as a new cell, so set the stringValue of the cell to the
-    // nameArray value at row
-    [result.textField setStringValue:[self.periphs objectAtIndex:row]];
+        // Get an existing cell with the MyView identifier if it exists
+        NSTableCellView *result = [tableView makeViewWithIdentifier:@"NameCell" owner:self];
     
-    // Return the result
-    return result;
+        // result is now guaranteed to be valid, either as a reused cell
+        // or as a new cell, so set the stringValue of the cell to the
+        // nameArray value at row
+        [result.textField setStringValue:[self.periphs objectAtIndex:row]];
+    
+        // Return the result
+        return result;
+    } else if ([tableColumn.identifier isEqual:@"RSSICell"]) {
+        // Get an existing cell with the MyView identifier if it exists
+        NSTableCellView *result = [tableView makeViewWithIdentifier:@"RSSICell" owner:self];
+        
+        // result is now guaranteed to be valid, either as a reused cell
+        // or as a new cell, so set the stringValue of the cell to the
+        // nameArray value at row
+        [result.textField setStringValue:[self.periphs objectAtIndex:row]];
+        
+        // Return the result
+        return result;
+    } else {
+        return nil;
+    }
 }
 
 - (id) tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
