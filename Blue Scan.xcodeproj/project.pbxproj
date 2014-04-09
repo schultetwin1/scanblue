@@ -20,6 +20,7 @@
 		C957D80D18F0B43B0076DE66 /* Blue_ScanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C957D80C18F0B43B0076DE66 /* Blue_ScanTests.m */; };
 		C957D81818F0B4B00076DE66 /* SPQRCMCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = C957D81718F0B4B00076DE66 /* SPQRCMCtrl.m */; };
 		C957D81A18F0B4D60076DE66 /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C957D81918F0B4D60076DE66 /* IOBluetooth.framework */; };
+		C9B4035F18F4C26800A8F965 /* SPQRPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4035E18F4C26800A8F965 /* SPQRPeripheral.m */; };
 		C9E46CEF18F49A4800A4C796 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E46CEE18F49A4800A4C796 /* CoreLocation.framework */; };
 		C9E46CF118F49C5C00A4C796 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E46CF018F49C5C00A4C796 /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,8 @@
 		C957D81618F0B4B00076DE66 /* SPQRCMCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPQRCMCtrl.h; sourceTree = "<group>"; };
 		C957D81718F0B4B00076DE66 /* SPQRCMCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPQRCMCtrl.m; sourceTree = "<group>"; };
 		C957D81918F0B4D60076DE66 /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = System/Library/Frameworks/IOBluetooth.framework; sourceTree = SDKROOT; };
+		C9B4035D18F4C26800A8F965 /* SPQRPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPQRPeripheral.h; sourceTree = "<group>"; };
+		C9B4035E18F4C26800A8F965 /* SPQRPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPQRPeripheral.m; sourceTree = "<group>"; };
 		C9E46CEE18F49A4800A4C796 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C9E46CF018F49C5C00A4C796 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -136,6 +139,8 @@
 				C957D7FA18F0B43B0076DE66 /* Images.xcassets */,
 				C957D81618F0B4B00076DE66 /* SPQRCMCtrl.h */,
 				C957D81718F0B4B00076DE66 /* SPQRCMCtrl.m */,
+				C9B4035D18F4C26800A8F965 /* SPQRPeripheral.h */,
+				C9B4035E18F4C26800A8F965 /* SPQRPeripheral.m */,
 				C957D7E918F0B43B0076DE66 /* Supporting Files */,
 			);
 			path = "Blue Scan";
@@ -271,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C957D81818F0B4B00076DE66 /* SPQRCMCtrl.m in Sources */,
+				C9B4035F18F4C26800A8F965 /* SPQRPeripheral.m in Sources */,
 				C957D7F618F0B43B0076DE66 /* SPQRAppDelegate.m in Sources */,
 				C957D7EF18F0B43B0076DE66 /* main.m in Sources */,
 			);

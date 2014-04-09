@@ -19,10 +19,7 @@
     self.isLocating = NO;
     
     self.ctrl = [[SPQRCMCtrl alloc] init];
-    if (self.ctrl) {
-        self.cBCM = [[[CBCentralManager alloc] init] initWithDelegate:self.ctrl queue:nil];
-        self.ctrl.delegate = self;
-    }
+    self.ctrl.delegate = self;
     
     // This should suck battery life :)
     self.cLLM = [[CLLocationManager alloc] init];
@@ -31,37 +28,78 @@
     [self.cLLM setDistanceFilter:kCLDistanceFilterNone];
     [self.cLLM startUpdatingLocation];
     self.isLocating = YES;
-    [self.locBtn setStringValue:@"Stop Locate"];
+    [self.locBtn setTitle:@"Stop Locate"];
     
     // Set up our dataview
     [self.scanData setDelegate:self];
     [self.scanData setDataSource:self];
+}
+
+- (void)sendPeripheral:(SPQRPeripheral *)peripheral {
+    if ([peripheral isUploaded]) {
+        return;
+    }
+    NSString *bodyData = [
+                          NSString stringWithFormat:@"timestamp=%d&MAC=%@&rand_mac=%@&name=%@&latitude=%f&longitude=%f&device=%@&passcode=%@",
+                          (int)round(peripheral.timestamp),
+                          @"00:00:00:00:00:00",
+                          @"1",
+                          self.ownerPullDown.titleOfSelectedItem,
+                          peripheral.location.coordinate.latitude,
+                          peripheral.location.coordinate.longitude,
+                          @"computer",
+                          self.sitePick.selectedSegment ? @"eecs588isalright": @"test_site"
+                        ];
     
+    NSString* url;
+    
+    if (self.sitePick.selectedSegment) {
+        url = @"https://track.schultetwins.com/api/v1.0/spot";
+    } else {
+        url = @"https://track-dev.schultetwins.com/api/v1.0/spot";
+    }
+    
+    NSMutableURLRequest *postRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    
+    [postRequest setHTTPMethod:@"POST"];
+    
+    [postRequest setHTTPBody:[NSData dataWithBytes:[bodyData UTF8String] length:strlen([bodyData UTF8String])]];
+    
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [NSURLConnection sendAsynchronousRequest:postRequest queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
+    {
+        if ([data length] > 0 && error == nil) {
+            [peripheral didUpload];
+        } else if ([data length] == 0 && error == nil) {
+            NSLog(@"ERRORL EMPTY REPLY");
+        } else if (error != nil) {
+            NSLog(@"Error On POST: %@", error);
+        }
+    }];
 }
 
 - (IBAction)scan:(id)sender {
     if (!self.isScanning) {
-        if (self.ctrl.cBReady) {
-            NSLog(@"BLE Scanning");
-            [self.cBCM scanForPeripheralsWithServices:nil options:nil];
-            self.isScanning = YES;
-            [self.scanBtn setStringValue:@"Stop Scan"];
-        }
+        NSLog(@"BLE Scanning");
+        [self.ctrl scan];
+        self.isScanning = YES;
+        [self.scanBtn setTitle:@"Stop Scan"];
     } else {
-        [self.cBCM stopScan];
+        [self.ctrl.cBCM stopScan];
         self.isScanning = NO;
-        [self.scanBtn setStringValue:@"Scan"];
+        [self.scanBtn setTitle:@"Scan"];
     }
 }
+
 - (IBAction)locate:(id)sender {
     if (self.isLocating) {
         [self.cLLM stopUpdatingLocation];
         self.isLocating = NO;
-        [self.locBtn setStringValue:@"Locate"];
+        [self.locBtn setTitle:@"Locate"];
     } else {
         [self.cLLM startUpdatingLocation];
         self.isLocating = YES;
-        [self.locBtn setStringValue:@"Stop Locate"];
+        [self.locBtn setTitle:@"Stop Locate"];
     }
 }
 
@@ -71,35 +109,36 @@
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     
+    SPQRPeripheral* periph = [self.periphs objectAtIndex:row];
+    NSTableCellView *result = [tableView makeViewWithIdentifier:tableColumn.identifier owner:self];
+    
     if ([tableColumn.identifier  isEqual: @"NameCell"]) {
-    
-        // Get an existing cell with the MyView identifier if it exists
-        NSTableCellView *result = [tableView makeViewWithIdentifier:@"NameCell" owner:self];
-    
         // result is now guaranteed to be valid, either as a reused cell
         // or as a new cell, so set the stringValue of the cell to the
         // nameArray value at row
-        [result.textField setStringValue:[self.periphs objectAtIndex:row]];
-    
-        // Return the result
-        return result;
+        NSString* name = [periph name];
+        if (!name) {
+            name = @"- None -";
+        }
+        [result.textField setStringValue:name];
     } else if ([tableColumn.identifier isEqual:@"RSSICell"]) {
-        // Get an existing cell with the MyView identifier if it exists
-        NSTableCellView *result = [tableView makeViewWithIdentifier:@"RSSICell" owner:self];
-        
         // result is now guaranteed to be valid, either as a reused cell
         // or as a new cell, so set the stringValue of the cell to the
         // nameArray value at row
-        [result.textField setStringValue:[self.periphs objectAtIndex:row]];
-        
-        // Return the result
-        return result;
-    } else {
-        return nil;
+        NSString* rssi =[NSString stringWithFormat:@"%@", [periph rssi]];
+        [result.textField setStringValue: rssi];
+    } else if ([tableColumn.identifier isEqual:@"UploadedCell"]) {
+        NSString* uploaded = [periph isUploaded] ? @"YES" : @"NO";
+        [result.textField setStringValue:uploaded];
     }
+    return result;
+    
 }
 
-- (void) didFindPeripheral:(CBPeripheral *)p {
+
+// CMCtrl delegate code
+- (void) didFindPeripheral:(SPQRPeripheral *)p {
+    [self sendPeripheral:p];
     [self.periphs addObject:p];
     [self.scanData reloadData];
 }

@@ -12,13 +12,12 @@
 
 #import "SPQRCMCtrl.h"
 
-@interface SPQRAppDelegate : NSObject <NSApplicationDelegate, SPQRCMCtrlDelegate, NSTableViewDataSource, NSTableViewDelegate>
+@interface SPQRAppDelegate : NSObject <NSApplicationDelegate, SPQRCMCtrlDelegate, NSTableViewDataSource, NSTableViewDelegate, NSURLConnectionDelegate>
 
 @property BOOL isScanning;
 @property BOOL isLocating;
 
 @property (strong) SPQRCMCtrl* ctrl;
-@property (nonatomic,strong) CBCentralManager *cBCM;
 @property (nonatomic,strong) CLLocationManager *cLLM;
 
 @property (strong) NSMutableArray* periphs;
@@ -30,6 +29,8 @@
 @property (weak) IBOutlet NSTextField *longText;
 @property (weak) IBOutlet NSTextField *latText;
 @property (weak) IBOutlet NSButton *locBtn;
+@property (weak) IBOutlet NSPopUpButton *ownerPullDown;
+@property (weak) IBOutlet NSSegmentedControl *sitePick;
 
 - (IBAction)scan:(id)sender;
 
