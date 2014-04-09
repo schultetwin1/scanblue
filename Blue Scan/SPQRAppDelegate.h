@@ -33,5 +33,6 @@
 @property (weak) IBOutlet NSSegmentedControl *sitePick;
 
 - (IBAction)scan:(id)sender;
+- (IBAction)upload:(id)sender;
 
 @end

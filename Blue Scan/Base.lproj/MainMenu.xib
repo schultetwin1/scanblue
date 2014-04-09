@@ -774,6 +774,39 @@
                                                 </tableCellView>
                                             </prototypeCellViews>
                                         </tableColumn>
+                                        <tableColumn identifier="SerialNumberCell" width="86" minWidth="10" maxWidth="3.4028234663852886e+38" id="AG2-I2-0XI">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Serial Number">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="poJ-On-iqR">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <prototypeCellViews>
+                                                <tableCellView identifier="SerialNumberCell" id="s89-xM-wWV">
+                                                    <rect key="frame" x="186" y="1" width="86" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="wGr-Ez-UgQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="86" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" id="nxa-q0-XNB">
+                                                                <font key="font" metaFont="system"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                        </textField>
+                                                    </subviews>
+                                                    <connections>
+                                                        <outlet property="textField" destination="wGr-Ez-UgQ" id="9uD-yn-Syp"/>
+                                                    </connections>
+                                                </tableCellView>
+                                            </prototypeCellViews>
+                                        </tableColumn>
                                         <tableColumn identifier="UploadedCell" width="60" minWidth="10" maxWidth="3.4028234663852886e+38" id="w2O-4W-8Af">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Uploaded">
                                                 <font key="font" metaFont="smallSystem"/>
@@ -788,7 +821,7 @@
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                             <prototypeCellViews>
                                                 <tableCellView identifier="UploadedCell" id="CRL-au-Lbs">
-                                                    <rect key="frame" x="186" y="1" width="60" height="17"/>
+                                                    <rect key="frame" x="275" y="1" width="60" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="nXE-2x-dxV">
@@ -919,6 +952,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="upload:" target="Voe-Tx-rLC" id="Saz-eS-vY2"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>

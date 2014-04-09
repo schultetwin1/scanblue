@@ -91,6 +91,15 @@
     }
 }
 
+- (IBAction)upload:(id)sender {
+    for (SPQRPeripheral* periph in self.periphs) {
+        if (periph.serialNumber) {
+            [self sendPeripheral:periph];
+        }
+    }
+    [self.scanData reloadData];
+}
+
 - (IBAction)locate:(id)sender {
     if (self.isLocating) {
         [self.cLLM stopUpdatingLocation];
@@ -130,6 +139,12 @@
     } else if ([tableColumn.identifier isEqual:@"UploadedCell"]) {
         NSString* uploaded = [periph isUploaded] ? @"YES" : @"NO";
         [result.textField setStringValue:uploaded];
+    } else if ([tableColumn.identifier isEqual:@"SerialNumberCell"]) {
+        NSString* serialNumber = [NSString stringWithFormat:@"%d", (int)periph.serialNumber];
+        if (!periph.serialNumber) {
+            serialNumber = @"N/A";
+        }
+        [result.textField setStringValue:serialNumber];
     }
     return result;
     
@@ -138,7 +153,6 @@
 
 // CMCtrl delegate code
 - (void) didFindPeripheral:(SPQRPeripheral *)p {
-    [self sendPeripheral:p];
     [self.periphs addObject:p];
     [self.scanData reloadData];
 }

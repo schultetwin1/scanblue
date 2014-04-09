@@ -22,7 +22,6 @@
 		C957D81A18F0B4D60076DE66 /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C957D81918F0B4D60076DE66 /* IOBluetooth.framework */; };
 		C9B4035F18F4C26800A8F965 /* SPQRPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4035E18F4C26800A8F965 /* SPQRPeripheral.m */; };
 		C9E46CEF18F49A4800A4C796 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E46CEE18F49A4800A4C796 /* CoreLocation.framework */; };
-		C9E46CF118F49C5C00A4C796 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E46CF018F49C5C00A4C796 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9E46CF118F49C5C00A4C796 /* MapKit.framework in Frameworks */,
 				C9E46CEF18F49A4800A4C796 /* CoreLocation.framework in Frameworks */,
 				C957D81A18F0B4D60076DE66 /* IOBluetooth.framework in Frameworks */,
 				C957D7E318F0B43B0076DE66 /* Cocoa.framework in Frameworks */,
